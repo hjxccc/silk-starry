@@ -7,6 +7,8 @@
 **帮你用好 Claude Code 的记忆机制 —— 写好、并持续进化你的 `CLAUDE.md`，无需手写、无需惦记维护。**
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-8A2BE2)](https://code.claude.com/docs/en/skills)
+[![CI](https://github.com/hjxccc/silk-starry/actions/workflows/ci.yml/badge.svg)](https://github.com/hjxccc/silk-starry/actions/workflows/ci.yml)
+[![tested](https://img.shields.io/badge/tested-Windows%20%7C%20macOS%20%7C%20Linux-2ea44f)](https://github.com/hjxccc/silk-starry/actions/workflows/ci.yml)
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-runtime%20neutral-blueviolet)](#)
 [![version](https://img.shields.io/badge/version-0.1.0-blue)](CHANGELOG.md)
 [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
