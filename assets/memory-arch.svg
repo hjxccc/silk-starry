@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <rect width="900" height="600" fill="#fbfbfe"/>
+  <text x="450" y="32" text-anchor="middle" font-size="19" font-weight="800" fill="#2a1a5e">Claude Code 记忆机制全景 × silk 在哪一层发力</text>
+  <text x="450" y="52" text-anchor="middle" font-size="12" fill="#888">据 Claude Code 源码（getMemoryFiles / SessionMemory / autoDream / MemoryType / isAutoMemPath / findRelevantMemories）</text>
+
+  <!-- 列标题 -->
+  <text x="60"  y="80" font-size="12.5" font-weight="700" fill="#555">记忆层</text>
+  <text x="340" y="80" font-size="12.5" font-weight="700" fill="#555">谁写 · 怎么加载 · 多大</text>
+  <text x="610" y="80" font-size="12.5" font-weight="700" fill="#6a4bd6">silk 在这层做什么</text>
+  <line x1="48" y1="88" x2="852" y2="88" stroke="#ddd"/>
+
+  <!-- 行模板:每行 y 间隔 72 -->
+  <!-- 1 Transcripts -->
+  <g>
+    <rect x="48" y="98" width="270" height="60" rx="9" fill="#f2f2f5" stroke="#d8d8e0"/>
+    <text x="62" y="123" font-size="14" font-weight="800" fill="#555">① 对话历史 Transcripts</text>
+    <text x="62" y="143" font-size="11" fill="#999">完整对话 JSONL · /export</text>
+    <text x="340" y="123" font-size="11.5" fill="#666">系统写 · ❌ 不自动加载(grep 查) · MB–GB</text>
+    <text x="610" y="130" font-size="12" fill="#333">🧹 <tspan font-weight="700">disk_hygiene</tspan> 体检膨胀(真凶常在这)</text>
+  </g>
+  <!-- 2 Session Memory -->
+  <g>
+    <rect x="48" y="170" width="270" height="60" rx="9" fill="#eef1fb" stroke="#c9d2f0"/>
+    <text x="62" y="195" font-size="14" font-weight="800" fill="#3a4a8a">② 会话记忆 Session Memory</text>
+    <text x="62" y="215" font-size="11" fill="#7a86b0">后台代理实时摘要 · 压缩用</text>
+    <text x="340" y="195" font-size="11.5" fill="#666">后台代理写 · ✅ 相关时加载 · 10–100KB</text>
+    <text x="610" y="202" font-size="12" fill="#999">了解即可，silk 不干预</text>
+  </g>
+  <!-- 3 CLAUDE.md 核心 -->
+  <g>
+    <rect x="48" y="242" width="270" height="60" rx="9" fill="#f4f0ff" stroke="#b69cff" stroke-width="2"/>
+    <text x="62" y="267" font-size="14" font-weight="800" fill="#6a4bd6">③ CLAUDE.md（4 层）★核心</text>
+    <text x="62" y="287" font-size="11" fill="#8a7fb5">全局/项目/local/子目录 · 行为契约</text>
+    <text x="340" y="267" font-size="11.5" fill="#666">你写 · ✅ 每次注入 · ≤200 行(理想≤60)</text>
+    <text x="610" y="274" font-size="12" fill="#333">📝 <tspan font-weight="700" fill="#6a4bd6">generate / audit / evolve / locate</tspan></text>
+    <text x="610" y="291" font-size="11" fill="#888">写好·体检·进化·就近定位(silk 主战场)</text>
+  </g>
+  <!-- 4 Auto Memory -->
+  <g>
+    <rect x="48" y="314" width="270" height="60" rx="9" fill="#eefaf1" stroke="#8fd6a8" stroke-width="2"/>
+    <text x="62" y="339" font-size="14" font-weight="800" fill="#1c7a45">④ Auto Memory（自动记忆）</text>
+    <text x="62" y="359" font-size="11" fill="#4a8a64">MEMORY.md 索引 + topic · 4 类型</text>
+    <text x="340" y="339" font-size="11.5" fill="#666">Claude 自动写 · ✅ 索引每次 · ~25KB</text>
+    <text x="610" y="346" font-size="12" fill="#333">🩺 <tspan font-weight="700" fill="#1c7a45">memory_digest / memory_doctor / graduate</tspan></text>
+    <text x="610" y="363" font-size="11" fill="#888">挖候选·体检·升级进 CLAUDE.md 后清理</text>
+  </g>
+  <!-- 5 Team Memory -->
+  <g>
+    <rect x="48" y="386" width="270" height="48" rx="9" fill="#f2f2f5" stroke="#d8d8e0"/>
+    <text x="62" y="409" font-size="14" font-weight="800" fill="#555">⑤ 团队记忆 Team Memory</text>
+    <text x="62" y="426" font-size="11" fill="#999">团队共享层</text>
+    <text x="340" y="414" font-size="11.5" fill="#666">团队写 · ✅ · —</text>
+    <text x="610" y="414" font-size="12" fill="#999">了解即可</text>
+  </g>
+
+  <!-- 召回机制说明条 -->
+  <rect x="48" y="446" width="804" height="40" rx="8" fill="#fff8ec" stroke="#f0d9a8"/>
+  <text x="62" y="463" font-size="12" font-weight="700" fill="#b8860b">召回机制（源码 findRelevantMemories）</text>
+  <text x="62" y="479" font-size="11" fill="#7a6a3a">MEMORY.md 索引常驻；单条记忆由 Sonnet 读"文件头清单(按 description 选)"挑最相关 5 条注入；&gt;1 天的记忆带"47 天前…可能过时"警告 → 所以 silk 盯紧 description 与时效。</text>
+
+  <!-- 控制层 -->
+  <text x="60" y="512" font-size="12.5" font-weight="700" fill="#555">控制层（决定上面怎么加载/强制）</text>
+  <g font-size="11.5">
+    <rect x="48"  y="522" width="190" height="54" rx="8" fill="#f7f4ff" stroke="#cdbcff"/>
+    <text x="60" y="544" font-weight="700" fill="#6a4bd6">.claude/rules/（paths 懒加载）</text>
+    <text x="60" y="563" fill="#888">silk：audit 拆分 + introspect 预测触发</text>
+    <rect x="248" y="522" width="190" height="54" rx="8" fill="#fbf2f2" stroke="#eccaca"/>
+    <text x="260" y="544" font-weight="700" fill="#a23">settings.json（强制）</text>
+    <text x="260" y="563" fill="#888">silk：硬约束转 hook + 记忆开关体检</text>
+    <rect x="448" y="522" width="190" height="54" rx="8" fill="#eef1fb" stroke="#c9d2f0"/>
+    <text x="460" y="544" font-weight="700" fill="#3a4a8a">hooks（自动化）</text>
+    <text x="460" y="563" fill="#888">silk：install_hooks 装提醒/嗅探</text>
+    <rect x="648" y="522" width="204" height="54" rx="8" fill="#f2f2f5" stroke="#d8d8e0"/>
+    <text x="660" y="544" font-weight="700" fill="#555">磁盘 debug//file-history/</text>
+    <text x="660" y="563" fill="#888">silk：disk_hygiene 揪膨胀(可达 300GB)</text>
+  </g>
+</svg>

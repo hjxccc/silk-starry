@@ -1,0 +1,22 @@
+[
+  {"query": "我这个 monorepo 里 web-app 这个子模块还没有 CLAUDE.md，帮我写一个，它是 vue3 + ts 的", "should_trigger": true},
+  {"query": "我的 CLAUDE.md 写到 300 多行了，claude 老是不遵守里面的规则，帮我看看怎么精简", "should_trigger": true},
+  {"query": "claude 老爱去改我 src/generated 里自动生成的文件，怎么把'不要动这个目录'固化成规则", "should_trigger": true},
+  {"query": "帮我审查一下整个仓库里所有的 CLAUDE.md，看有没有写得不好或者敏感信息", "should_trigger": true},
+  {"query": "把'提交前必须先跑 pnpm lint && pnpm test'这条加进项目规则里，省得每次提醒它", "should_trigger": true},
+  {"query": "我在 acme-platform 这个大仓库里改 api-server 后端的代码，到底该参考哪个 CLAUDE.md？根目录的还是子模块的", "should_trigger": true},
+  {"query": "这轮会话搞了半天，有没有什么值得沉淀进 claude 配置、下次别再重复解释的东西", "should_trigger": true},
+  {"query": "个人全局偏好（所有项目都生效那种）和项目级、本地的 claude.md，分别该写些什么内容", "should_trigger": true},
+  {"query": "my CLAUDE.md keeps getting ignored by claude, can you trim it down to only the rules that actually change its behavior", "should_trigger": true},
+  {"query": "我项目里 auto memory 攒了一堆经验了，挑几条反复出现的升级成正式规则进 CLAUDE.md", "should_trigger": true},
+  {"query": "帮我写个 README.md，介绍下这个项目是干嘛的、怎么安装运行", "should_trigger": false},
+  {"query": "给 src/utils/format.ts 这个文件里的函数补一下 JSDoc 注释", "should_trigger": false},
+  {"query": "我的 .env 不小心提交到 git 了，里面有数据库密码，现在怎么补救", "should_trigger": false},
+  {"query": "帮我给这个后端接口写一份 API 文档，列出参数和返回值", "should_trigger": false},
+  {"query": "claude code 的 PostToolUse hook 具体怎么在 settings.json 里配，格式是啥", "should_trigger": false},
+  {"query": "解释一下 claude code 的 auto memory 机制是怎么工作的，存在哪", "should_trigger": false},
+  {"query": "帮我 review 一下当前分支这个 PR 的代码，看有没有 bug", "should_trigger": false},
+  {"query": "我想给 claude 做一个新的 skill，专门处理 excel 的，怎么开始", "should_trigger": false},
+  {"query": "AGENTS.md 和 CLAUDE.md 到底有啥区别，哪个工具读哪个", "should_trigger": false},
+  {"query": "把 docs/ 目录下这堆 markdown 文件统一转成 PDF", "should_trigger": false}
+]

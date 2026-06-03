@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0820"/>
+      <stop offset="0.5" stop-color="#1d1248"/>
+      <stop offset="1" stop-color="#3a1d72"/>
+    </linearGradient>
+    <linearGradient id="silk-starry" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9a7bff"/>
+      <stop offset="0.5" stop-color="#c4a3ff"/>
+      <stop offset="1" stop-color="#86c8ff"/>
+    </linearGradient>
+    <!-- 流星拖尾：尾部透明 → 头部明亮 -->
+    <linearGradient id="meteor" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b69cff" stop-opacity="0"/>
+      <stop offset="0.65" stop-color="#c9b6ff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f1e9ff" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="head" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="0.4" stop-color="#dcc9ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#b69cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#9a7bff" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#9a7bff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="760" height="220" rx="16" fill="url(#bg)"/>
+
+  <!-- 大范围柔光 -->
+  <circle cx="610" cy="60" r="150" fill="url(#glow)"/>
+
+  <!-- 丝滑飘带（紫色渐变，半透明叠层） -->
+  <g fill="none" stroke="url(#silk-starry)">
+    <path d="M0 150 C 150 108, 300 192, 480 138 S 760 116, 760 150" stroke-opacity="0.30" stroke-width="2.5"/>
+    <path d="M0 168 C 160 138, 320 206, 500 160 S 760 148, 760 174" stroke-opacity="0.22" stroke-width="2"/>
+    <path d="M0 188 C 170 166, 330 214, 520 184 S 760 176, 760 196" stroke-opacity="0.16" stroke-width="1.6"/>
+    <path d="M0 132 C 140 100, 300 168, 470 120 S 760 100, 760 130" stroke-opacity="0.12" stroke-width="1.4"/>
+  </g>
+
+  <!-- 流星雨（平行拖尾 + 明亮星头） -->
+  <g>
+    <g transform="translate(452,16) rotate(29)">
+      <rect x="0" y="-1.1" width="158" height="2.2" rx="1.1" fill="url(#meteor)"/>
+      <circle cx="160" cy="0" r="8" fill="url(#head)"/>
+      <circle cx="160" cy="0" r="2.3" fill="#ffffff"/>
+    </g>
+    <g transform="translate(566,48) rotate(29)" opacity="0.8">
+      <rect x="0" y="-0.9" width="116" height="1.8" rx="0.9" fill="url(#meteor)"/>
+      <circle cx="118" cy="0" r="6" fill="url(#head)"/>
+      <circle cx="118" cy="0" r="1.8" fill="#ffffff"/>
+    </g>
+    <g transform="translate(636,8) rotate(29)" opacity="0.65">
+      <rect x="0" y="-0.8" width="88" height="1.6" rx="0.8" fill="url(#meteor)"/>
+      <circle cx="90" cy="0" r="4.5" fill="url(#head)"/>
+      <circle cx="90" cy="0" r="1.4" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- 静态星点 -->
+  <g fill="#dCE7ff">
+    <circle cx="690" cy="36" r="1.6" opacity="0.9"/>
+    <circle cx="724" cy="70" r="1.3" opacity="0.7"/>
+    <circle cx="600" cy="30" r="1.1" opacity="0.6"/>
+    <circle cx="664" cy="104" r="1.4" opacity="0.7"/>
+    <circle cx="540" cy="40" r="1.0" opacity="0.5"/>
+    <circle cx="716" cy="120" r="1.2" opacity="0.6"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="48" y="104" font-size="50" font-weight="800" fill="url(#silk-starry)">✨ silk-starry</text>
+  <text x="50" y="146" font-size="20" font-weight="600" fill="#ece8ff">帮你把 CLAUDE.md 写好，并一直保持好</text>
+  <text x="50" y="176" font-size="14.5" fill="#b3aae0">不用手写 · 不用记着维护 · 自动生成 / 体检 / 进化你的项目记忆</text>
+</svg>

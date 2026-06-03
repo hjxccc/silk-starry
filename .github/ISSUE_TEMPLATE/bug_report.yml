@@ -1,0 +1,35 @@
+name: 🐛 Bug 报告
+description: 脚本崩溃、给了错误结果、或行为不符预期
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么
+      description: 描述 bug + 你预期的行为
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      description: 用了哪个动作/脚本、对什么输入、完整命令
+      placeholder: |
+        1. python skills/silk-starry/scripts/audit.py path/to/CLAUDE.md
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 环境
+      placeholder: OS（Windows/macOS/Linux）· Python 版本 · Claude Code 版本
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私
+      options:
+        - label: 我已确认复现信息里**没有**真实凭证/个人信息
+          required: true

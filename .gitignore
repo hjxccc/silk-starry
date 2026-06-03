@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+# 评测/测试运行产物
+**/evals/*.log
+**/evals/smoke*.json
+**/evals/out.json
+**/evals/*-out.log
+*-workspace/

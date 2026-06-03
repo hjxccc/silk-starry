@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <rect width="760" height="360" fill="#fbfbfe"/>
+  <text x="380" y="32" text-anchor="middle" font-size="18" font-weight="800" fill="#2a1a5e">同一个真实项目，CLAUDE.md 写多少行？</text>
+  <text x="380" y="52" text-anchor="middle" font-size="12.5" fill="#888">Anthropic 建议：根文件 ≤200 行、理想 &lt;60；超 200 行遵守率断崖下降 → 越短 AI 越照做</text>
+
+  <!-- axis -->
+  <line x1="70" y1="290" x2="710" y2="290" stroke="#ccc"/>
+  <g font-size="11" fill="#aaa" text-anchor="end">
+    <line x1="70" y1="232" x2="710" y2="232" stroke="#f0f0f0"/><text x="64" y="236">40</text>
+    <line x1="70" y1="174" x2="710" y2="174" stroke="#f0f0f0"/><text x="64" y="178">80</text>
+    <line x1="70" y1="116" x2="710" y2="116" stroke="#f0f0f0"/><text x="64" y="120">120</text>
+  </g>
+  <!-- 官方理想区 ≤60 行 -->
+  <rect x="70" y="203" width="640" height="87" fill="#34c77b" fill-opacity="0.07"/>
+  <line x1="70" y1="203" x2="710" y2="203" stroke="#34c77b" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="78" y="198" font-size="11" font-weight="700" fill="#1c7a45">↓ 官方理想区（≤60 行）—— 只有 silk-starry 的三根落在这里</text>
+
+  <!-- bars: baseline y=290, scale 1.45 px/line -->
+  <!-- requests: silk-starry 28(41), init 117(170) -->
+  <g>
+    <rect x="120" y="249" width="50" height="41" rx="4" fill="#8a7bff"/><text x="145" y="244" text-anchor="middle" font-size="12" font-weight="700" fill="#6a4bd6">28</text>
+    <rect x="178" y="120" width="50" height="170" rx="4" fill="#c9ccd6"/><text x="203" y="114" text-anchor="middle" font-size="12" font-weight="700" fill="#888">117</text>
+    <text x="174" y="310" text-anchor="middle" font-size="12.5" font-weight="600" fill="#555">requests (Py)</text>
+  </g>
+  <!-- gin: silk-starry 30(44), init 95(138) -->
+  <g>
+    <rect x="300" y="246" width="50" height="44" rx="4" fill="#8a7bff"/><text x="325" y="241" text-anchor="middle" font-size="12" font-weight="700" fill="#6a4bd6">30</text>
+    <rect x="358" y="152" width="50" height="138" rx="4" fill="#c9ccd6"/><text x="383" y="146" text-anchor="middle" font-size="12" font-weight="700" fill="#888">95</text>
+    <text x="354" y="310" text-anchor="middle" font-size="12.5" font-weight="600" fill="#555">gin (Go)</text>
+  </g>
+  <!-- humanlayer: silk-starry 42(61), 专家 88(128), init 127(184) -->
+  <g>
+    <rect x="476" y="229" width="42" height="61" rx="4" fill="#8a7bff"/><text x="497" y="224" text-anchor="middle" font-size="12" font-weight="700" fill="#6a4bd6">42</text>
+    <rect x="524" y="162" width="42" height="128" rx="4" fill="#f0b95a"/><text x="545" y="156" text-anchor="middle" font-size="12" font-weight="700" fill="#b8860b">88</text>
+    <rect x="572" y="106" width="42" height="184" rx="4" fill="#c9ccd6"/><text x="593" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#888">127</text>
+    <text x="545" y="310" text-anchor="middle" font-size="12.5" font-weight="600" fill="#555">humanlayer (TS+Go)</text>
+  </g>
+
+  <!-- legend -->
+  <g font-size="12" font-weight="600">
+    <rect x="240" y="332" width="13" height="13" rx="3" fill="#8a7bff"/><text x="258" y="343" fill="#555">silk-starry</text>
+    <rect x="350" y="332" width="13" height="13" rx="3" fill="#f0b95a"/><text x="368" y="343" fill="#555">专家手写</text>
+    <rect x="436" y="332" width="13" height="13" rx="3" fill="#c9ccd6"/><text x="454" y="343" fill="#555">Claude 自带 /init</text>
+  </g>
+</svg>

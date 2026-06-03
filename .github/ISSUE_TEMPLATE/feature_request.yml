@@ -1,0 +1,22 @@
+name: 💡 功能建议
+description: 希望 silk-starry 能多做点什么
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你遇到的问题 / 场景
+      description: 你在维护 CLAUDE.md 时卡在哪、想要它帮你做什么
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 你期望的做法
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 涉及哪块
+      options: [生成, 审查, 进化, 编排, 跨工具, 模板, 触发, 其他]

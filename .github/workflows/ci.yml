@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: 编译所有脚本（不能有语法错误）
+        run: |
+          python -m py_compile scripts/*.py
+          python -m py_compile scripts/hooks/*.py
+
+      - name: plugin 清单 JSON 合法
+        run: |
+          python - <<'PY'
+          import json
+          json.load(open(".claude-plugin/plugin.json", encoding="utf-8"))
+          json.load(open(".claude-plugin/marketplace.json", encoding="utf-8"))
+          json.load(open("evals/trigger-eval.json", encoding="utf-8"))
+          print("✅ 所有 JSON 合法")
+          PY
+
+      - name: 冒烟 —— audit / scan 能跑且不崩
+        run: |
+          mkdir -p /tmp/smoke
+          printf '# CLAUDE.md\n## 概述\n一个示例项目。\n## 禁区\n- 不要改自动生成文件。\n' > /tmp/smoke/CLAUDE.md
+          python scripts/audit.py /tmp/smoke/CLAUDE.md
+          python scripts/scan.py /tmp/smoke
+
+      - name: 对抗冒烟 —— 畸形输入不能崩
+        run: |
+          : > /tmp/smoke/empty_CLAUDE.md                       # 空文件
+          printf '%0.s#' {1..100000} > /tmp/smoke/long_CLAUDE.md  # 超长单行
+          python scripts/audit.py /tmp/smoke/empty_CLAUDE.md
+          python scripts/audit.py /tmp/smoke/long_CLAUDE.md
+          echo "✅ 对抗输入未崩溃"
