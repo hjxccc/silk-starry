@@ -5,6 +5,9 @@ on:
     branches: [main, master]
   pull_request:
 
+env:
+  PYTHONUTF8: "1"   # Windows runner 默认 cp1252，强制 UTF-8 才能打印中文/emoji
+
 jobs:
   validate:
     runs-on: ${{ matrix.os }}

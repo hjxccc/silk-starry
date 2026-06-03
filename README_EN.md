@@ -23,7 +23,7 @@
 
 But it's awkward in practice: **hard to write well, harder to maintain.**
 
-- Too long → the AI can't retain it and stops following it (the official guidance is ≤200 lines; past that, adherence falls off a cliff — [an arXiv study](https://arxiv.org/abs/2507.11538) measured even the best frontier model at only 68% adherence under 500 instructions).
+- Too long → the AI can't retain it and stops following it. Anthropic's own guidance says a bloated CLAUDE.md "gets ignored — half of it"; and an independent study, [IFScale](https://arxiv.org/abs/2507.11538), separately measured even the best frontier model at only 68% adherence under 500 instructions (a common rule of thumb is ≤200 lines).
 - Written like docs (folder trees, tech-stack lists) → all stuff the AI already learns from the code; pure context waste.
 - Left untouched → it **rots** as the code evolves, and starts misleading the AI six months later.
 - One slip → a DB password or internal IP ends up in it, committed to git.
