@@ -71,6 +71,6 @@
 
   <!-- 标题 -->
   <text x="48" y="104" font-size="50" font-weight="800" fill="url(#silk-starry)">✨ silk-starry</text>
-  <text x="50" y="146" font-size="20" font-weight="600" fill="#ece8ff">帮你把 CLAUDE.md 写好，并一直保持好</text>
-  <text x="50" y="176" font-size="14.5" fill="#b3aae0">不用手写 · 不用记着维护 · 自动生成 / 体检 / 进化你的项目记忆</text>
+  <text x="50" y="146" font-size="20" font-weight="600" fill="#ece8ff">帮你管好 Claude Code 的一整套记忆</text>
+  <text x="50" y="176" font-size="14" fill="#b3aae0">CLAUDE.md · auto-memory · rules · 磁盘 —— 自动生成 / 体检 / 进化，不用手写不惦记</text>
 </svg>

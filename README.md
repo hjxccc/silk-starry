@@ -4,7 +4,7 @@
 
 # ✨ silk-starry
 
-**帮你用好 Claude Code 的记忆机制 —— 写好、并持续进化你的 `CLAUDE.md`，无需手写、无需惦记维护。**
+**帮你管好 Claude Code 的一整套记忆机制 —— `CLAUDE.md`、auto-memory、`.claude/rules`、磁盘，自动生成 · 体检 · 进化，无需手写、无需惦记维护。**
 
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-8A2BE2)](https://code.claude.com/docs/en/skills)
 [![CI](https://github.com/hjxccc/silk-starry/actions/workflows/ci.yml/badge.svg)](https://github.com/hjxccc/silk-starry/actions/workflows/ci.yml)
