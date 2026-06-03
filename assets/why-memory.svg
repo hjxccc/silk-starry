@@ -1,48 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
-  <rect width="760" height="430" fill="#fbfbfe"/>
-  <text x="380" y="30" text-anchor="middle" font-size="18" font-weight="800" fill="#2a1a5e">指令越多，AI 越记不住——所以记忆要「短而准」</text>
-  <text x="380" y="50" text-anchor="middle" font-size="12.5" fill="#888">CLAUDE.md / 记忆里每多一条规则，都是一条要 AI 同时遵守的指令</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0820"/><stop offset="0.55" stop-color="#1d1248"/><stop offset="1" stop-color="#3a1d72"/>
+    </linearGradient>
+    <linearGradient id="silk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9a7bff"/><stop offset="0.5" stop-color="#c4a3ff"/><stop offset="1" stop-color="#86c8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="430" rx="16" fill="url(#bg)"/>
+  <text x="380" y="32" text-anchor="middle" font-size="18" font-weight="800" fill="url(#silk)">指令越多，AI 越记不住——所以记忆要「短而准」</text>
+  <text x="380" y="51" text-anchor="middle" font-size="12.5" fill="#a9b0e0">CLAUDE.md / 记忆里每多一条规则，都是一条要 AI 同时遵守的指令</text>
 
   <!-- 甜区 -->
-  <rect x="90" y="60" width="76" height="300" fill="#e9f9ee"/>
-  <text x="128" y="376" text-anchor="middle" font-size="10.5" fill="#1c7a45">好的 CLAUDE.md</text>
-  <text x="128" y="389" text-anchor="middle" font-size="10.5" fill="#1c7a45">待在这（≤60 行）</text>
+  <rect x="90" y="62" width="76" height="298" fill="#6ee7a0" fill-opacity="0.12"/>
+  <text x="128" y="376" text-anchor="middle" font-size="10.5" fill="#7fe0a8">好的 CLAUDE.md</text>
+  <text x="128" y="389" text-anchor="middle" font-size="10.5" fill="#7fe0a8">待在这（≤60 行）</text>
 
   <!-- 轴 -->
-  <line x1="90" y1="60" x2="90" y2="360" stroke="#bbb" stroke-width="1.2"/>
-  <line x1="90" y1="360" x2="720" y2="360" stroke="#bbb" stroke-width="1.2"/>
-  <!-- y 刻度 -->
-  <g font-size="11" fill="#888" text-anchor="end">
-    <text x="84" y="64">100%</text><line x1="90" y1="60" x2="720" y2="60" stroke="#eee"/>
-    <text x="84" y="214">50%</text><line x1="90" y1="210" x2="720" y2="210" stroke="#eee"/>
+  <line x1="90" y1="62" x2="90" y2="360" stroke="#ffffff" stroke-opacity="0.22"/>
+  <line x1="90" y1="360" x2="720" y2="360" stroke="#ffffff" stroke-opacity="0.22"/>
+  <g font-size="11" fill="#8a90c0" text-anchor="end">
+    <text x="84" y="66">100%</text><line x1="90" y1="62" x2="720" y2="62" stroke="#ffffff" stroke-opacity="0.07"/>
+    <text x="84" y="214">50%</text><line x1="90" y1="210" x2="720" y2="210" stroke="#ffffff" stroke-opacity="0.07"/>
     <text x="84" y="364">0%</text>
   </g>
-  <text x="34" y="215" text-anchor="middle" font-size="12" fill="#555" transform="rotate(-90 34 215)">AI 遵守率</text>
-  <!-- x 刻度 -->
-  <g font-size="11" fill="#888" text-anchor="middle">
-    <text x="216" y="378">100</text>
-    <text x="342" y="378">200</text>
-    <text x="468" y="378">300</text>
-    <text x="594" y="378">400</text>
-    <text x="720" y="378">500 条指令</text>
+  <text x="34" y="215" text-anchor="middle" font-size="12" fill="#a9b0e0" transform="rotate(-90 34 215)">AI 遵守率</text>
+  <g font-size="11" fill="#8a90c0" text-anchor="middle">
+    <text x="216" y="378">100</text><text x="342" y="378">200</text><text x="468" y="378">300</text><text x="594" y="378">400</text><text x="720" y="378">500 条指令</text>
   </g>
 
-  <!-- 曲线:推理模型(掉到68%) -->
-  <polyline fill="none" stroke="#e0a92e" stroke-width="2.6" points="90,63 216,69 342,84 468,96 594,120 669,144 720,156"/>
-  <!-- 线性衰减 -->
-  <polyline fill="none" stroke="#8a5bd6" stroke-width="2.6" points="90,63 216,90 342,126 468,168 594,195 720,216"/>
-  <!-- 指数衰减 -->
-  <polyline fill="none" stroke="#e0653a" stroke-width="2.6" points="90,75 153,120 216,213 279,261 405,294 594,312 720,315"/>
+  <polyline fill="none" stroke="#e0a92e" stroke-width="2.8" points="90,63 216,69 342,84 468,96 594,120 669,144 720,156"/>
+  <polyline fill="none" stroke="#b69cff" stroke-width="2.8" points="90,63 216,90 342,126 468,168 594,195 720,216"/>
+  <polyline fill="none" stroke="#ff7a6b" stroke-width="2.8" points="90,75 153,120 216,213 279,261 405,294 594,312 720,315"/>
 
-  <!-- 68% 标注 -->
-  <circle cx="720" cy="156" r="4" fill="#e0a92e"/>
-  <text x="714" y="148" text-anchor="end" font-size="12" font-weight="700" fill="#b8860b">最强模型也只剩 68%</text>
+  <circle cx="720" cy="156" r="4.5" fill="#f0c674"/>
+  <text x="714" y="148" text-anchor="end" font-size="12" font-weight="700" fill="#f0c674">最强模型也只剩 68%</text>
 
-  <!-- 图例 -->
   <g font-size="11.5" font-weight="600">
-    <rect x="150" y="398" width="22" height="3" fill="#e0a92e"/><text x="178" y="402" fill="#555">最强推理模型</text>
-    <rect x="300" y="398" width="22" height="3" fill="#8a5bd6"/><text x="328" y="402" fill="#555">线性衰减</text>
-    <rect x="430" y="398" width="22" height="3" fill="#e0653a"/><text x="458" y="402" fill="#555">指数衰减（崩得最快）</text>
+    <rect x="150" y="398" width="22" height="3" fill="#e0a92e"/><text x="178" y="402" fill="#cdd2f5">最强推理模型</text>
+    <rect x="300" y="398" width="22" height="3" fill="#b69cff"/><text x="328" y="402" fill="#cdd2f5">线性衰减</text>
+    <rect x="430" y="398" width="22" height="3" fill="#ff7a6b"/><text x="458" y="402" fill="#cdd2f5">指数衰减（崩得最快）</text>
   </g>
-  <text x="380" y="422" text-anchor="middle" font-size="10.5" fill="#aaa">数据结论来自 IFScale 基准（arXiv:2507.11538）——20 个前沿模型实测，越长越不照做</text>
+  <text x="380" y="422" text-anchor="middle" font-size="10.5" fill="#7a80b0">数据结论来自 IFScale 基准（arXiv:2507.11538）——20 个前沿模型实测，越长越不照做</text>
 </svg>
