@@ -20,14 +20,18 @@ jobs:
           python -m py_compile scripts/*.py
           python -m py_compile scripts/hooks/*.py
 
-      - name: plugin 清单 JSON 合法
+      - name: 校验 SKILL.md frontmatter + JSON 合法
         run: |
           python - <<'PY'
-          import json
-          json.load(open(".claude-plugin/plugin.json", encoding="utf-8"))
-          json.load(open(".claude-plugin/marketplace.json", encoding="utf-8"))
+          import json, re
+          t = open("SKILL.md", encoding="utf-8").read()
+          m = re.match(r"^---\r?\n(.*?)\r?\n---", t, re.S)
+          assert m, "SKILL.md 缺 frontmatter"
+          fm = m.group(1)
+          assert re.search(r"^name:", fm, re.M), "SKILL.md 缺 name 字段"
+          assert re.search(r"^description:", fm, re.M), "SKILL.md 缺 description 字段"
           json.load(open("evals/trigger-eval.json", encoding="utf-8"))
-          print("✅ 所有 JSON 合法")
+          print("✅ SKILL.md frontmatter + JSON 合法")
           PY
 
       - name: 冒烟 —— audit / scan 能跑且不崩
