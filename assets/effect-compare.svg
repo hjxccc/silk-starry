@@ -1,65 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" width="920" height="560" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
-  <rect width="920" height="560" fill="#fbfbfe"/>
-  <text x="460" y="34" text-anchor="middle" font-size="19" font-weight="800" fill="#2a1a5e">同一个真实项目（psf/requests），两种产出对比</text>
-  <text x="460" y="55" text-anchor="middle" font-size="12.5" fill="#888">下面是两边**真实生成**的 CLAUDE.md 内容（节选）</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0820"/><stop offset="0.55" stop-color="#1a1142"/><stop offset="1" stop-color="#2a1a5e"/></linearGradient>
+    <linearGradient id="silk" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9a7bff"/><stop offset="0.5" stop-color="#c4a3ff"/><stop offset="1" stop-color="#86c8ff"/></linearGradient>
+  </defs>
+  <rect width="920" height="560" rx="16" fill="url(#bg)"/>
+  <text x="460" y="34" text-anchor="middle" font-size="19" font-weight="800" fill="url(#silk)">同一个真实项目（psf/requests），两种产出对比</text>
+  <text x="460" y="55" text-anchor="middle" font-size="12.5" fill="#a9b0e0">下面是两边真实生成的 CLAUDE.md 内容（节选）</text>
 
   <!-- LEFT: silk-starry -->
-  <rect x="28" y="74" width="416" height="452" rx="12" fill="#ffffff" stroke="#cdbcff" stroke-width="1.5"/>
-  <rect x="28" y="74" width="416" height="50" rx="12" fill="#f4f0ff"/>
-  <rect x="28" y="112" width="416" height="12" fill="#f4f0ff"/>
-  <text x="46" y="98" font-size="15" font-weight="800" fill="#6a4bd6">✨ silk-starry · 28 行</text>
-  <text x="46" y="116" font-size="11.5" fill="#7a6fb0">✅ 审计干净 · 每条都是"读代码看不出来的坑"</text>
-  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" fill="#333">
-    <text x="46" y="150" font-weight="700" fill="#6a4bd6">## 代码偏好（仅列与默认不同的）</text>
-    <text x="46" y="170">· 字符串用<tspan font-weight="700">双引号</tspan>，别改单引号（format 会打回）</text>
+  <rect x="28" y="74" width="416" height="452" rx="12" fill="#150f30" stroke="#b69cff" stroke-width="1.5"/>
+  <rect x="28" y="74" width="416" height="50" rx="12" fill="#9a7bff" fill-opacity="0.16"/>
+  <rect x="28" y="112" width="416" height="12" fill="#9a7bff" fill-opacity="0.16"/>
+  <text x="46" y="98" font-size="15" font-weight="800" fill="#c4a3ff">✨ silk-starry · 28 行</text>
+  <text x="46" y="116" font-size="11.5" fill="#a99fd0">✅ 审计干净 · 每条都是"读代码看不出来的坑"</text>
+  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" fill="#cdd2f5">
+    <text x="46" y="150" font-weight="700" fill="#c4a3ff">## 代码偏好（仅列与默认不同的）</text>
+    <text x="46" y="170">· 字符串用<tspan font-weight="700" fill="#ece8ff">双引号</tspan>，别改单引号（format 会打回）</text>
     <text x="46" y="188">· 公开函数补类型标注，否则 pyright strict 红</text>
-    <text x="46" y="216" font-weight="700" fill="#6a4bd6">## 禁区</text>
-    <text x="46" y="236">· docstring <tspan font-weight="700">别写会失败/联网的示例</tspan></text>
-    <text x="60" y="253" fill="#999">（pytest 配 --doctest-modules，&gt;&gt;&gt; 会当测试跑）</text>
+    <text x="46" y="216" font-weight="700" fill="#c4a3ff">## 禁区</text>
+    <text x="46" y="236">· docstring <tspan font-weight="700" fill="#ece8ff">别写会失败/联网的示例</tspan></text>
+    <text x="60" y="253" fill="#8a90c0">（pytest 配 --doctest-modules，&gt;&gt;&gt; 会当测试跑）</text>
     <text x="46" y="275">· compat.py 是 Py2/3 垫片，新逻辑别塞这</text>
     <text x="46" y="293">· 不要新增运行时依赖，先确认</text>
-    <text x="46" y="321" font-weight="700" fill="#6a4bd6">## 提交前必跑</text>
-    <text x="46" y="341" font-size="10.2">ruff check . &amp;&amp; ruff format --check .</text>
-    <text x="46" y="357" font-size="10.2">  &amp;&amp; pyright src/requests/ &amp;&amp; make test</text>
-    <text x="46" y="385" font-weight="700" fill="#6a4bd6">## 工作方式</text>
+    <text x="46" y="321" font-weight="700" fill="#c4a3ff">## 提交前必跑</text>
+    <text x="46" y="341" font-size="10.2" fill="#9fb0f0">ruff check . &amp;&amp; ruff format --check .</text>
+    <text x="46" y="357" font-size="10.2" fill="#9fb0f0">  &amp;&amp; pyright src/requests/ &amp;&amp; make test</text>
+    <text x="46" y="385" font-weight="700" fill="#c4a3ff">## 工作方式</text>
     <text x="46" y="405">· 改 bug 必配"不改就失败"的回归测试</text>
-    <text x="46" y="423">· commit 要写<tspan font-weight="700">为什么</tspan>这么改</text>
+    <text x="46" y="423">· commit 要写<tspan font-weight="700" fill="#ece8ff">为什么</tspan>这么改</text>
   </g>
-  <rect x="46" y="448" width="380" height="60" rx="9" fill="#eefaf1" stroke="#bfe6cd"/>
-  <text x="56" y="470" font-size="12" font-weight="700" fill="#1c7a45">👍 全是「不写它 AI 就会踩」的真坑</text>
-  <text x="56" y="490" font-size="11.5" fill="#3a8a5e">double-quote 陷阱 · doctest 陷阱 · 垫片文件 · 4 个 CI gate</text>
+  <rect x="46" y="448" width="380" height="60" rx="9" fill="#6ee7a0" fill-opacity="0.10" stroke="#6ee7a0" stroke-opacity="0.5"/>
+  <text x="56" y="470" font-size="12" font-weight="700" fill="#7fe0a8">👍 全是「不写它 AI 就会踩」的真坑</text>
+  <text x="56" y="490" font-size="11.5" fill="#6cb88a">double-quote 陷阱 · doctest 陷阱 · 垫片文件 · 4 个 CI gate</text>
 
   <!-- RIGHT: /init -->
-  <rect x="476" y="74" width="416" height="452" rx="12" fill="#ffffff" stroke="#d8d8e0" stroke-width="1.5"/>
-  <rect x="476" y="74" width="416" height="50" rx="12" fill="#f4f4f7"/>
-  <rect x="476" y="112" width="416" height="12" fill="#f4f4f7"/>
-  <text x="494" y="98" font-size="15" font-weight="800" fill="#777">📄 Claude 自带 /init · 117 行</text>
-  <text x="494" y="116" font-size="11.5" fill="#999">⚠️ 大半是"读代码就知道"的内容</text>
-  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" fill="#666">
-    <text x="494" y="150" font-weight="700" fill="#999">## Project Overview</text>
+  <rect x="476" y="74" width="416" height="452" rx="12" fill="#141228" stroke="#ffffff" stroke-opacity="0.18"/>
+  <rect x="476" y="74" width="416" height="50" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <rect x="476" y="112" width="416" height="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="494" y="98" font-size="15" font-weight="800" fill="#9aa0c0">📄 Claude 自带 /init · 117 行</text>
+  <text x="494" y="116" font-size="11.5" fill="#7a80a0">⚠️ 大半是"读代码就知道"的内容</text>
+  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" fill="#a0a6c8">
+    <text x="494" y="150" font-weight="700" fill="#8a90b0">## Project Overview</text>
     <text x="494" y="168">Requests is "HTTP for Humans"...</text>
-    <text x="494" y="184" fill="#b08">~300M downloads/week  ← 营销话</text>
-    <text x="494" y="200" fill="#b08">Current version: 2.34.2  ← 读文件就知道</text>
-    <text x="494" y="216" fill="#b08">License: Apache-2.0</text>
-    <text x="494" y="240" font-weight="700" fill="#999">## Tech Stack</text>
-    <text x="494" y="258" fill="#b08">urllib3&gt;=1.26,&lt;3 — transport</text>
-    <text x="494" y="274" fill="#b08">charset_normalizer&gt;=2,&lt;4 — encoding</text>
-    <text x="494" y="290" fill="#b08">idna&gt;=2.5,&lt;4 / certifi&gt;=2023.5.7</text>
-    <text x="494" y="306" fill="#aaa">（一整张依赖版本表，读 pyproject 就有）</text>
-    <text x="494" y="330" font-weight="700" fill="#999">## Directory Structure</text>
-    <text x="494" y="348" fill="#b08">src/requests/ 下 19 个文件逐个说明…</text>
-    <text x="494" y="364" fill="#aaa">api.py / sessions.py / models.py / ...</text>
-    <text x="494" y="380" fill="#aaa">（AI 自己 ls 就能看到，全是噪声）</text>
-    <text x="494" y="404" font-weight="700" fill="#999">## Conventions</text>
-    <text x="494" y="422" fill="#999">"Modern ES6+...", "Strict typing"  ← 空泛</text>
+    <text x="494" y="184" fill="#ff9b8f">~300M downloads/week  ← 营销话</text>
+    <text x="494" y="200" fill="#ff9b8f">Current version: 2.34.2  ← 读文件就知道</text>
+    <text x="494" y="216" fill="#ff9b8f">License: Apache-2.0</text>
+    <text x="494" y="240" font-weight="700" fill="#8a90b0">## Tech Stack</text>
+    <text x="494" y="258" fill="#ff9b8f">urllib3&gt;=1.26,&lt;3 — transport</text>
+    <text x="494" y="274" fill="#ff9b8f">charset_normalizer&gt;=2,&lt;4 — encoding</text>
+    <text x="494" y="290" fill="#ff9b8f">idna&gt;=2.5,&lt;4 / certifi&gt;=2023.5.7</text>
+    <text x="494" y="306" fill="#777f9a">（一整张依赖版本表，读 pyproject 就有）</text>
+    <text x="494" y="330" font-weight="700" fill="#8a90b0">## Directory Structure</text>
+    <text x="494" y="348" fill="#ff9b8f">src/requests/ 下 19 个文件逐个说明…</text>
+    <text x="494" y="364" fill="#777f9a">api.py / sessions.py / models.py / ...</text>
+    <text x="494" y="380" fill="#777f9a">（AI 自己 ls 就能看到，全是噪声）</text>
+    <text x="494" y="404" font-weight="700" fill="#8a90b0">## Conventions</text>
+    <text x="494" y="422" fill="#8a90b0">"Modern ES6+...", "Strict typing"  ← 空泛</text>
   </g>
-  <rect x="494" y="448" width="380" height="60" rx="9" fill="#fbf2f2" stroke="#eccaca"/>
-  <text x="504" y="470" font-size="12" font-weight="700" fill="#a23">🗑 一半内容 AI 读代码就知道</text>
-  <text x="504" y="490" font-size="11.5" fill="#995">版本号 · 下载量 · 依赖表 · 目录树 · 空泛规范</text>
+  <rect x="494" y="448" width="380" height="60" rx="9" fill="#ff7a6b" fill-opacity="0.10" stroke="#ff7a6b" stroke-opacity="0.5"/>
+  <text x="504" y="470" font-size="12" font-weight="700" fill="#ff9b8f">🗑 一半内容 AI 读代码就知道</text>
+  <text x="504" y="490" font-size="11.5" fill="#c89a98">版本号 · 下载量 · 依赖表 · 目录树 · 空泛规范</text>
 
   <!-- VS -->
-  <circle cx="460" cy="300" r="22" fill="#2a1a5e"/>
-  <text x="460" y="306" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">VS</text>
+  <circle cx="460" cy="300" r="22" fill="#9a7bff"/>
+  <text x="460" y="306" text-anchor="middle" font-size="15" font-weight="800" fill="#160f33">VS</text>
 
-  <text x="460" y="548" text-anchor="middle" font-size="13" font-weight="600" fill="#444">silk-starry 只留「读代码看不出来的坑」；/init 把「读代码就知道」的抄了一整遍 → 越长，AI 越容易忽略真正的规矩</text>
+  <text x="460" y="548" text-anchor="middle" font-size="13" font-weight="600" fill="#cdd2f5">silk-starry 只留「读代码看不出来的坑」；/init 把「读代码就知道」的抄了一整遍 → 越长，AI 越容易忽略真正的规矩</text>
 </svg>

@@ -1,47 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" width="820" height="460" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
   <defs>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f4f5fb"/></linearGradient>
-    <marker id="arr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#8a7bff"/></marker>
-    <marker id="arrG" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#34c77b"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0820"/><stop offset="0.55" stop-color="#1a1142"/><stop offset="1" stop-color="#2a1a5e"/></linearGradient>
+    <linearGradient id="silk" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9a7bff"/><stop offset="0.5" stop-color="#c4a3ff"/><stop offset="1" stop-color="#86c8ff"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241b4e"/><stop offset="1" stop-color="#1a1338"/></linearGradient>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#9a7bff"/></marker>
+    <marker id="arrG" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6ee7a0"/></marker>
   </defs>
-  <rect width="820" height="460" fill="#fbfbfe"/>
-  <text x="410" y="34" text-anchor="middle" font-size="20" font-weight="800" fill="#2a1a5e">silk-starry 怎么工作</text>
+  <rect width="820" height="460" rx="16" fill="url(#bg)"/>
+  <text x="410" y="34" text-anchor="middle" font-size="20" font-weight="800" fill="url(#silk)">silk-starry 怎么工作</text>
 
   <!-- inputs -->
   <g>
-    <rect x="40" y="64" width="220" height="70" rx="12" fill="url(#card)" stroke="#d8d8ec"/>
-    <text x="150" y="93" text-anchor="middle" font-size="15" font-weight="700" fill="#333">🗂 你的项目代码</text>
-    <text x="150" y="115" text-anchor="middle" font-size="12" fill="#777">技术栈 · 约定 · 坑</text>
+    <rect x="40" y="64" width="220" height="70" rx="12" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="150" y="93" text-anchor="middle" font-size="15" font-weight="700" fill="#ece8ff">🗂 你的项目代码</text>
+    <text x="150" y="115" text-anchor="middle" font-size="12" fill="#a9b0e0">技术栈 · 约定 · 坑</text>
 
-    <rect x="560" y="64" width="220" height="70" rx="12" fill="#eef9f1" stroke="#bfe6cd"/>
-    <text x="670" y="93" text-anchor="middle" font-size="15" font-weight="700" fill="#1c7a45">🧠 官方 auto-memory</text>
-    <text x="670" y="115" text-anchor="middle" font-size="12" fill="#5a9c74">Claude 自动攒的经验</text>
+    <rect x="560" y="64" width="220" height="70" rx="12" fill="#6ee7a0" fill-opacity="0.10" stroke="#6ee7a0" stroke-opacity="0.55"/>
+    <text x="670" y="93" text-anchor="middle" font-size="15" font-weight="700" fill="#7fe0a8">🧠 官方 auto-memory</text>
+    <text x="670" y="115" text-anchor="middle" font-size="12" fill="#6cb88a">Claude 自动攒的经验</text>
   </g>
 
-  <!-- silk-starry core: 4 actions -->
-  <rect x="40" y="170" width="740" height="120" rx="16" fill="#f6f4ff" stroke="#cdbcff" stroke-width="1.5"/>
-  <text x="58" y="160" font-size="14" font-weight="800" fill="#6a4bd6">✨ silk-starry</text>
-  <g font-size="13.5" font-weight="700" fill="#2a1a5e">
-    <g><rect x="62" y="192" width="160" height="76" rx="11" fill="url(#card)" stroke="#d8d8ec"/><text x="142" y="222" text-anchor="middle">📝 生成</text><text x="142" y="244" text-anchor="middle" font-size="11.5" font-weight="500" fill="#777">探栈→选模板→删减</text></g>
-    <g><rect x="240" y="192" width="160" height="76" rx="11" fill="url(#card)" stroke="#d8d8ec"/><text x="320" y="222" text-anchor="middle">🔍 体检</text><text x="320" y="244" text-anchor="middle" font-size="11.5" font-weight="500" fill="#777">超长/敏感/空泛/冲突</text></g>
-    <g><rect x="418" y="192" width="160" height="76" rx="11" fill="url(#card)" stroke="#d8d8ec"/><text x="498" y="222" text-anchor="middle">🔄 进化</text><text x="498" y="244" text-anchor="middle" font-size="11.5" font-weight="500" fill="#777">经验升级成规则</text></g>
-    <g><rect x="596" y="192" width="162" height="76" rx="11" fill="url(#card)" stroke="#d8d8ec"/><text x="677" y="222" text-anchor="middle">🧭 编排</text><text x="677" y="244" text-anchor="middle" font-size="11.5" font-weight="500" fill="#777">多文件定位/同步</text></g>
+  <!-- silk-starry core -->
+  <rect x="40" y="170" width="740" height="120" rx="16" fill="#9a7bff" fill-opacity="0.12" stroke="#b69cff" stroke-width="1.5"/>
+  <text x="58" y="160" font-size="14" font-weight="800" fill="#c4a3ff">✨ silk-starry</text>
+  <g font-size="13.5" font-weight="700" fill="#ece8ff">
+    <g><rect x="62" y="192" width="160" height="76" rx="11" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.16"/><text x="142" y="222" text-anchor="middle">📝 生成</text><text x="142" y="244" text-anchor="middle" font-size="11.5" font-weight="500" fill="#a9b0e0">探栈→选模板→删减</text></g>
+    <g><rect x="240" y="192" width="160" height="76" rx="11" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.16"/><text x="320" y="222" text-anchor="middle">🔍 体检</text><text x="320" y="244" text-anchor="middle" font-size="11.5" font-weight="500" fill="#a9b0e0">超长/敏感/空泛/冲突</text></g>
+    <g><rect x="418" y="192" width="160" height="76" rx="11" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.16"/><text x="498" y="222" text-anchor="middle">🔄 进化</text><text x="498" y="244" text-anchor="middle" font-size="11.5" font-weight="500" fill="#a9b0e0">经验升级成规则</text></g>
+    <g><rect x="596" y="192" width="162" height="76" rx="11" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.16"/><text x="677" y="222" text-anchor="middle">🧭 编排</text><text x="677" y="244" text-anchor="middle" font-size="11.5" font-weight="500" fill="#a9b0e0">多文件定位/同步</text></g>
   </g>
 
   <!-- output -->
-  <rect x="230" y="338" width="360" height="62" rx="14" fill="#eef4ff" stroke="#b9cdf5"/>
-  <text x="410" y="364" text-anchor="middle" font-size="15" font-weight="800" fill="#1f4fb0">📄 一份精简 · 不腐烂 · 不泄密的 CLAUDE.md</text>
-  <text x="410" y="386" text-anchor="middle" font-size="12" fill="#5a7bc0">≤200 行 · 每条可执行 · 配反例 · 写明禁区</text>
+  <rect x="230" y="338" width="360" height="62" rx="14" fill="#6f86e0" fill-opacity="0.12" stroke="#7b8fd6" stroke-opacity="0.6"/>
+  <text x="410" y="364" text-anchor="middle" font-size="15" font-weight="800" fill="#9fb0f0">📄 一份精简 · 不腐烂 · 不泄密的 CLAUDE.md</text>
+  <text x="410" y="386" text-anchor="middle" font-size="12" fill="#8a93c8">≤200 行 · 每条可执行 · 配反例 · 写明禁区</text>
 
   <!-- human gate -->
-  <g><rect x="624" y="346" width="156" height="46" rx="12" fill="#fff7e8" stroke="#f0d49a"/><text x="702" y="367" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a9760f">🧑 写入前你说了算</text><text x="702" y="383" text-anchor="middle" font-size="11" fill="#b88a3a">给 diff · 等确认 · 最小改动</text></g>
+  <g><rect x="624" y="346" width="156" height="46" rx="12" fill="#e0a92e" fill-opacity="0.10" stroke="#e0a92e" stroke-opacity="0.5"/><text x="702" y="367" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f0c674">🧑 写入前你说了算</text><text x="702" y="383" text-anchor="middle" font-size="11" fill="#d6c79a">给 diff · 等确认 · 最小改动</text></g>
 
   <!-- arrows -->
-  <path d="M150 134 L150 170" stroke="#8a7bff" stroke-width="2" fill="none" marker-end="url(#arr)"/>
-  <path d="M410 290 L410 338" stroke="#8a7bff" stroke-width="2" fill="none" marker-end="url(#arr)"/>
-  <!-- evolution loop: auto-memory -> 进化 -> CLAUDE.md -> 清理 -> back -->
-  <path d="M670 134 C 670 150, 540 158, 498 192" stroke="#34c77b" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
-  <text x="600" y="152" font-size="11" font-weight="600" fill="#1c7a45">挖反复出现的经验</text>
-  <path d="M520 338 C 560 300, 740 280, 760 150" stroke="#34c77b" stroke-width="1.6" stroke-dasharray="5 4" fill="none" marker-end="url(#arrG)"/>
-  <text x="690" y="250" font-size="11" font-weight="600" fill="#1c7a45" transform="rotate(-72 690 250)">升级后清理记忆·腾预算</text>
+  <path d="M150 134 L150 170" stroke="#9a7bff" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M410 290 L410 338" stroke="#9a7bff" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M670 134 C 670 150, 540 158, 498 192" stroke="#6ee7a0" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <text x="600" y="152" font-size="11" font-weight="600" fill="#7fe0a8">挖反复出现的经验</text>
+  <path d="M520 338 C 560 300, 740 280, 760 150" stroke="#6ee7a0" stroke-width="1.6" stroke-dasharray="5 4" fill="none" marker-end="url(#arrG)"/>
+  <text x="690" y="250" font-size="11" font-weight="600" fill="#7fe0a8" transform="rotate(-72 690 250)">升级后清理记忆·腾预算</text>
 </svg>
