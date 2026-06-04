@@ -39,7 +39,7 @@ printf -- '- [双引号](feedback_q.md) — 双引号\n- [陈旧](project_stale.
 printf -- '---\nname: q\ndescription: 字符串用双引号否则 CI 打回\nmetadata:\n  type: feedback\n---\n双引号。\n' > "$MEM/feedback_q.md"
 printf -- '---\nname: stale\nmetadata:\n  type: project\n---\n冻结到上周。\n' > "$MEM/project_stale.md"
 
-echo "# silk-starry 功能冒烟（样本: $ROOT）"
+echo "# silk-starry 功能冒烟（样本: ${ROOT}）"
 assert_contains "audit 揪出密钥"      "$(python $S/audit.py "$ROOT/CLAUDE.md" 2>&1)"            "敏感信息"
 assert_contains "scan 列出文件"        "$(python $S/scan.py "$ROOT" 2>&1)"                       "CLAUDE.md"
 assert_contains "conflicts 抓到冲突"   "$(python $S/conflicts.py "$ROOT" 2>&1)"                  "缩进"
