@@ -16,7 +16,7 @@ description: "Writes, audits, and continuously evolves project memory across the
 ## 一、先建立心智（这决定了你所有动作的分寸）
 
 1. **CLAUDE.md 是「行为契约」，不是文档百科。** 它每次会话注入到系统提示之后，是
-   建议性上下文——Claude 大约 80% 会遵守，**不保证**。所以：硬约束（禁止 `rm -rf`、
+   建议性上下文——Claude 多数情况会遵守，但**不保证**。所以：硬约束（禁止 `rm -rf`、
    禁止 push main）该用 PreToolUse hook，**不是**写进 CLAUDE.md。
 
 2. **越短越灵（有实证，silk-starry 的第一性原则）。** arXiv 2507.11538（IFScale）实测：500 条指令密度下
