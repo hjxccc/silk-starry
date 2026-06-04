@@ -61,18 +61,18 @@
 
   <!-- 控制层 -->
   <text x="60" y="512" font-size="12.5" font-weight="700" fill="#a9b0e0">控制层（决定上面怎么加载/强制）</text>
-  <g font-size="11.5">
+  <g font-size="10.5">
     <rect x="48"  y="522" width="190" height="54" rx="8" fill="#9a7bff" fill-opacity="0.10" stroke="#b69cff" stroke-opacity="0.6"/>
     <text x="60" y="544" font-weight="700" fill="#c4a3ff">.claude/rules/（paths 懒加载）</text>
-    <text x="60" y="563" fill="#8a90c0">silk：audit 拆分 + introspect 预测触发</text>
+    <text x="60" y="563" fill="#8a90c0">silk：拆分规则 + 预测触发</text>
     <rect x="248" y="522" width="190" height="54" rx="8" fill="#ff7a6b" fill-opacity="0.10" stroke="#ff7a6b" stroke-opacity="0.5"/>
     <text x="260" y="544" font-weight="700" fill="#ff9b8f">settings.json（强制）</text>
-    <text x="260" y="563" fill="#8a90c0">silk：硬约束转 hook + 记忆开关体检</text>
+    <text x="260" y="563" fill="#8a90c0">silk：硬约束转 hook、记忆体检</text>
     <rect x="448" y="522" width="190" height="54" rx="8" fill="#6f86e0" fill-opacity="0.10" stroke="#7b8fd6" stroke-opacity="0.6"/>
     <text x="460" y="544" font-weight="700" fill="#9fb0f0">hooks（自动化）</text>
-    <text x="460" y="563" fill="#8a90c0">silk：install_hooks 装提醒/嗅探</text>
+    <text x="460" y="563" fill="#8a90c0">silk：装提醒 + 嗅探纠正</text>
     <rect x="648" y="522" width="204" height="54" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.16"/>
-    <text x="660" y="544" font-weight="700" fill="#c2c8e8">磁盘 debug//file-history/</text>
-    <text x="660" y="563" fill="#8a90c0">silk：disk_hygiene 揪膨胀(可达 300GB)</text>
+    <text x="660" y="544" font-weight="700" fill="#c2c8e8">磁盘 debug/ file-history/</text>
+    <text x="660" y="563" fill="#8a90c0">silk：disk_hygiene 揪膨胀</text>
   </g>
 </svg>
