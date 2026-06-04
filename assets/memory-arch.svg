@@ -54,9 +54,10 @@
   <text x="610" y="414" font-size="12" fill="#8088b8">了解即可</text>
 
   <!-- 召回机制 -->
-  <rect x="48" y="446" width="804" height="40" rx="8" fill="#e0a92e" fill-opacity="0.10" stroke="#e0a92e" stroke-opacity="0.4"/>
+  <rect x="48" y="446" width="804" height="52" rx="8" fill="#e0a92e" fill-opacity="0.10" stroke="#e0a92e" stroke-opacity="0.4"/>
   <text x="62" y="463" font-size="12" font-weight="700" fill="#f0c674">召回机制（源码 findRelevantMemories）</text>
-  <text x="62" y="479" font-size="11" fill="#d6c79a">MEMORY.md 索引常驻；单条记忆由 Sonnet 读"文件头清单(按 description 选)"挑最相关 5 条注入；&gt;1 天的记忆带"47 天前…可能过时"警告 → 所以 silk 盯紧 description 与时效。</text>
+  <text x="62" y="478" font-size="11" fill="#d6c79a">MEMORY.md 索引常驻；单条记忆由 Sonnet 读「文件头清单(按 description 选)」挑最相关 5 条注入；</text>
+  <text x="62" y="493" font-size="11" fill="#d6c79a">&gt;1 天的记忆带「47 天前…可能过时」警告 → 所以 silk 盯紧每条的 description 与时效。</text>
 
   <!-- 控制层 -->
   <text x="60" y="512" font-size="12.5" font-weight="700" fill="#a9b0e0">控制层（决定上面怎么加载/强制）</text>
