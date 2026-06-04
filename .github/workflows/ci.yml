@@ -58,3 +58,6 @@ jobs:
           python scripts/audit.py /tmp/smoke/empty_CLAUDE.md
           python scripts/audit.py /tmp/smoke/long_CLAUDE.md
           echo "✅ 对抗输入未崩溃"
+
+      - name: 全功能冒烟（带断言：每个脚本不仅能跑，还要检对）
+        run: bash tests/smoke.sh
