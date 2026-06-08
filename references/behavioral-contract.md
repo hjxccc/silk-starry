@@ -52,12 +52,15 @@ NOT for: routing, retries, status-code handling, deterministic transforms.
 If code can answer, code answers.
 
 ## Rule 6 — Token budgets are not advisory
-If a task approaches budget, summarize and start fresh. Surface the breach;
-do not silently overrun a 50k-token context dump.
+Every iteration loop (debug, refactor, generate) gets a budget (max iterations / tokens / time).
+If a task approaches it, summarize and start fresh — surface the breach, don't silently overrun.
+Never re-suggest a fix that was already rejected.
 
 ## Rule 7 — Surface conflicts, don't average them
-If two existing patterns contradict, pick one (more recent / more tested), explain why,
-flag the other for cleanup. "Average" code that satisfies both is the worst code.
+If two existing patterns contradict, name the conflict ("Module A uses X, B uses Y — which
+should new code follow?") and wait for a human call. Recommend the stronger option (more recent
+/ more tested) with reasoning, but don't unilaterally pick or blend them. "Average" code that
+satisfies both is the worst code.
 
 ## Rule 8 — Read before you write
 Before adding code, read the file's exports, the immediate caller, shared utilities.
@@ -68,8 +71,8 @@ Every test encodes WHY the behavior matters, not just WHAT it does.
 If a test can't fail when business logic changes, the function is wrong.
 
 ## Rule 10 — Checkpoint after every significant step
-Summarize what was done, what's verified, what's left. Don't continue from a
-state you can't describe back. If you lose track, stop and restate.
+Summarize what was done, what's verified, what's left. On a failed step, roll back to the last
+good checkpoint — don't build on a broken state. If you lose track, stop and restate.
 
 ## Rule 11 — Match conventions, even if you disagree
 Conformance > taste inside the codebase. If a convention is genuinely harmful,
